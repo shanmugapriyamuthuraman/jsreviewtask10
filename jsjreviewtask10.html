@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<input type="text" id="inp1" value="">
+	<input type="text" id="inp2" value="">
+	<button type="button" id="but1">click</button>
+	<p id="content"></p>
+	<script>
+		let age=prompt("enter a age");
+		let sex=prompt("enter a sex");
+		if(age>18&&sex=="female"){
+			console.log("only working in urban areas");
+		}
+		else if(sex=="male"){
+			if(age=>20&&age<=40){
+				console.log("working in anywhere")
+			}
+			else{
+				if(age=>40&&age<=60){
+					console.log("working in urban")
+				}
+			}
+		}
+		else{
+			console.log("error")
+		}
+		<!---DOM creation-->
+		let but2=document.getElementById("but1");
+		but1.addEventListener("click",check)
+		function check(){
+			let input1=document.getElementById("inp1").value;
+			let input2=document.getElementById("inp2").value;
+			if(input1>18&&input2=="female"){
+			document.getElementById("content").innerHTML=("only working in urban areas");
+		}
+		else if(input2=="male"){
+			if(input1=>20&&input1<=40){
+				document.getElementById("content").innerHTML=("working in anywhere");
+			}
+			else{
+				if(input1=>40&&input1<=60){
+					document.getElementById("content").innerHtml=("working in urban");
+				}
+			}
+		}
+		else{
+			document.getElementById("content").innerHTML=("error");
+		}
+		}
+	</script>
+</body>
+</html>	
